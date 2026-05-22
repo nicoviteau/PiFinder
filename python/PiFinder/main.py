@@ -14,6 +14,18 @@ import gettext
 
 import os
 
+// Monkey patch of ImageDraw.Draw to intercept screens and transmit it remotely
+from PIL import ImageDraw
+from PiFinder.ui.remote_draw import RemoteDraw
+
+# Original_Draw saving
+ImageDraw._original_Draw = ImageDraw.Draw
+
+# Replacement by RemoteDraw
+ImageDraw.Draw = RemoteDraw
+// End of Monkey patch
+
+
 # skyfield performance fix, see: https://rhodesmill.org/skyfield/accuracy-efficiency.html
 os.environ["OPENBLAS_NUM_THREADS"] = "1"
 os.environ["MKL_NUM_THREADS"] = "1"
