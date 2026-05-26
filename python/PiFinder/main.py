@@ -14,7 +14,7 @@ import gettext
 
 import os
 
-// Monkey patch of ImageDraw.Draw to intercept screens and transmit it remotely
+# Monkey patch of ImageDraw.Draw to intercept screens and transmit it remotely
 from PIL import ImageDraw
 from PiFinder.ui.remote_draw import RemoteDraw
 
