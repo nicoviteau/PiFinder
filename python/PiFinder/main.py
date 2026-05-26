@@ -23,7 +23,7 @@ ImageDraw._original_Draw = ImageDraw.Draw
 
 # Replacement by RemoteDraw
 ImageDraw.Draw = RemoteDraw
-// End of Monkey patch
+# End of Monkey patch
 
 
 # skyfield performance fix, see: https://rhodesmill.org/skyfield/accuracy-efficiency.html
